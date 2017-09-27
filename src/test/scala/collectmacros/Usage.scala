@@ -16,6 +16,8 @@ object Usage {
     assertEquals(xList(1, 2, 3), 1 :: 2 :: 3 :: Nil)
     assertEquals(xList(B2, C2, D), List(B2, C2, D))
     assertEquals(xList(B2, C2, D), B2 :: C2 :: D :: Nil)
+    assertEquals(xVector(1, 2, 3), Vector(1, 2, 3))
+    assertEquals(xVector(B2, C2, D), Vector(B2, C2, D))
   }
 
   def assertEquals[T](l: T, r: T) = {
