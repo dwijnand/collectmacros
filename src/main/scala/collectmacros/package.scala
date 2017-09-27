@@ -15,3 +15,12 @@ final class xList(val c: blackbox.Context) {
   def applyImpl[A](xs: Tree*)(implicit A: WeakTypeTag[A]) =
     xs.foldRight(NilObject: Tree)((next, acc) => q"new $ConsType[$A]($next, $acc)")
 }
+
+object Desugar {
+  def desugar(a: Any): String = macro Desugar.desugarImpl
+}
+
+final class Desugar(val c: blackbox.Context) {
+  import c.universe._
+  def desugarImpl(a: Tree) = Literal(Constant(showRaw(a)))
+}
