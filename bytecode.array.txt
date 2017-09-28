@@ -1,0 +1,55 @@
+class Bytecode {
+  def ai0 = Array()
+  def ai1 = Array(1)
+  def ai2 = Array(1, 2)
+  def ai3 = Array(1, 2, 3)
+  def ai4 = Array(1, 2, 3, 4)
+  def ai5 = Array(1, 2, 3, 4, 5)
+
+  import collectmacros._
+  def xi0 = xArray()
+  def xi1 = xArray(1)
+  def xi2 = xArray(1, 2)
+  def xi3 = xArray(1, 2, 3)
+  def xi4 = xArray(1, 2, 3, 4)
+  def xi5 = xArray(1, 2, 3, 4, 5)
+
+  def as0 = Array()
+  def as1 = Array("1")
+  def as2 = Array("1", "2")
+  def as3 = Array("1", "2", "3")
+  def as4 = Array("1", "2", "3", "4")
+  def as5 = Array("1", "2", "3", "4", "5")
+
+  import collectmacros._
+  def xs0 = xArray()
+  def xs1 = xArray("1")
+  def xs2 = xArray("1", "2")
+  def xs3 = xArray("1", "2", "3")
+  def xs4 = xArray("1", "2", "3", "4")
+  def xs5 = xArray("1", "2", "3", "4", "5")
+}
+
+| arity | Array.apply | xArray.apply |
++-------+-------------+--------------+
+|     0 |          19 |            5 |
+|     1 |           8 |           10 |
+|     2 |          12 |           14 |
+|     3 |          16 |           18 |
+|     4 |          20 |           22 |
+|     5 |          24 |           26 |
+
+ Array.apply = 4 * arity + 4
+xArray.apply = 4 * arity + 6
+
+| arity | Array.apply | xArray.apply |
++-------+-------------+--------------+
+|     0 |          19 |            5 |
+|     1 |          16 |           12 |
+|     2 |          21 |           17 |
+|     3 |          26 |           22 |
+|     4 |          31 |           27 |
+|     5 |          36 |           32 |
+
+ Array.apply = 5 * arity + 11
+xArray.apply = 5 * arity +  7

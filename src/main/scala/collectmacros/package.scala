@@ -31,6 +31,24 @@ final class xVector(val c: blackbox.Context) {
   }
 }
 
+object xArray {
+  def apply[A](xs: A*): Array[A] = macro xArray.applyImpl[A]
+}
+
+final class xArray(val c: blackbox.Context) {
+  import c.universe._
+
+  private val ArrayType = tq"_root_.scala.Array"
+
+  def applyImpl[A](xs: Tree*)(implicit A: WeakTypeTag[A]) = {
+    if (xs.isEmpty) q"new $ArrayType[$A](0)"
+    else {
+      val assignments = xs.zipWithIndex map { case (x, idx) => q"a($idx) = $x" }
+      q"{ val a = new $ArrayType[$A](${xs.size}); ..$assignments; a }"
+    }
+  }
+}
+
 object Desugar {
   def desugar(a: Any): String = macro Desugar.desugarImpl
 }

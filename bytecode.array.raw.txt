@@ -1,0 +1,812 @@
+> console
+[info] Starting scala interpreter...
+Welcome to Scala 2.12.3 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_144).
+Type in expressions for evaluation. Or try :help.
+
+scala> :paste -raw
+// Entering paste mode (ctrl-D to finish)
+
+package t
+
+class Bytecode {
+  def ai0 = Array()
+  def ai1 = Array(1)
+  def ai2 = Array(1, 2)
+  def ai3 = Array(1, 2, 3)
+  def ai4 = Array(1, 2, 3, 4)
+  def ai5 = Array(1, 2, 3, 4, 5)
+
+  import collectmacros._
+  def xi0 = xArray()
+  def xi1 = xArray(1)
+  def xi2 = xArray(1, 2)
+  def xi3 = xArray(1, 2, 3)
+  def xi4 = xArray(1, 2, 3, 4)
+  def xi5 = xArray(1, 2, 3, 4, 5)
+
+  def as0 = Array()
+  def as1 = Array("1")
+  def as2 = Array("1", "2")
+  def as3 = Array("1", "2", "3")
+  def as4 = Array("1", "2", "3", "4")
+  def as5 = Array("1", "2", "3", "4", "5")
+
+  import collectmacros._
+  def xs0 = xArray()
+  def xs1 = xArray("1")
+  def xs2 = xArray("1", "2")
+  def xs3 = xArray("1", "2", "3")
+  def xs4 = xArray("1", "2", "3", "4")
+  def xs5 = xArray("1", "2", "3", "4", "5")
+}
+
+// Exiting paste mode, now interpreting.
+
+
+scala> :javap t.Bytecode
+  Size 3616 bytes
+  MD5 checksum b1edabaa7df4268d69063a5517ec1b39
+  Compiled from "<pastie>"
+public class t.Bytecode
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Utf8               t/Bytecode
+   #2 = Class              #1             // t/Bytecode
+   #3 = Utf8               java/lang/Object
+   #4 = Class              #3             // java/lang/Object
+   #5 = Utf8               <pastie>
+   #6 = Utf8               Lscala/reflect/ScalaSignature;
+   #7 = Utf8               bytes
+   #8 = Utf8               ]3A!
+                               \tA!);fG>$WMC!8A\n\"a!Q!Cg
+                                                         G.Y!a!8z%4\"B\tqAj]&$F!\t!D\"\r\tM
+                                                                                           )Aq!F
+                                                                                                \nYA!!B!seCA\tIBAO_RDN\4\t
+                                                                                                                          mAL'F!\r9Q\t}I!\t%sGC#A$AbSJBQ\nq\t1!Y541\"\r\tQ!\tHC&,\"\ta=ja!)AC90[\t
+                                                                                                                                                                                                  9AaL'C1A$AySNBQA\rq\t1_55!\"\rA.m!\taECN\"\tIaA1tcU\t+m\"P!uR!AP \t1
+                                         gn!!.<b\tUHTiJLgn\t!\t!OCN\"$\tIaA1tg!)\nCsmt
+                                                                                      )AAXCM1#AygBBQAe\n1_:2\":\rA8O\r%!\t!OqN\"+\tIa=ti!)a
+                                                                                                                                           Csp]
+                                                                                                                                                  #9 = Utf8               ai0
+  #10 = Utf8               ()[Ljava/lang/Object;
+  #11 = Utf8               scala/Array$
+  #12 = Class              #11            // scala/Array$
+  #13 = Utf8               MODULE$
+  #14 = Utf8               Lscala/Array$;
+  #15 = NameAndType        #13:#14        // MODULE$:Lscala/Array$;
+  #16 = Fieldref           #12.#15        // scala/Array$.MODULE$:Lscala/Array$;
+  #17 = Utf8               scala/collection/immutable/Nil$
+  #18 = Class              #17            // scala/collection/immutable/Nil$
+  #19 = Utf8               Lscala/collection/immutable/Nil$;
+  #20 = NameAndType        #13:#19        // MODULE$:Lscala/collection/immutable/Nil$;
+  #21 = Fieldref           #18.#20        // scala/collection/immutable/Nil$.MODULE$:Lscala/collection/immutable/Nil$;
+  #22 = Utf8               scala/reflect/ClassTag$
+  #23 = Class              #22            // scala/reflect/ClassTag$
+  #24 = Utf8               Lscala/reflect/ClassTag$;
+  #25 = NameAndType        #13:#24        // MODULE$:Lscala/reflect/ClassTag$;
+  #26 = Fieldref           #23.#25        // scala/reflect/ClassTag$.MODULE$:Lscala/reflect/ClassTag$;
+  #27 = Utf8               Nothing
+  #28 = Utf8               ()Lscala/reflect/ClassTag;
+  #29 = NameAndType        #27:#28        // Nothing:()Lscala/reflect/ClassTag;
+  #30 = Methodref          #23.#29        // scala/reflect/ClassTag$.Nothing:()Lscala/reflect/ClassTag;
+  #31 = Utf8               apply
+  #32 = Utf8               (Lscala/collection/Seq;Lscala/reflect/ClassTag;)Ljava/lang/Object;
+  #33 = NameAndType        #31:#32        // apply:(Lscala/collection/Seq;Lscala/reflect/ClassTag;)Ljava/lang/Object;
+  #34 = Methodref          #12.#33        // scala/Array$.apply:(Lscala/collection/Seq;Lscala/reflect/ClassTag;)Ljava/lang/Object;
+  #35 = Utf8               [Ljava/lang/Object;
+  #36 = Class              #35            // "[Ljava/lang/Object;"
+  #37 = Utf8               this
+  #38 = Utf8               Lt/Bytecode;
+  #39 = Utf8               ai1
+  #40 = Utf8               ()[I
+  #41 = Utf8               ai2
+  #42 = Utf8               ai3
+  #43 = Utf8               ai4
+  #44 = Utf8               ai5
+  #45 = Utf8               xi0
+  #46 = Utf8               xi1
+  #47 = Utf8               a
+  #48 = Utf8               [I
+  #49 = Utf8               xi2
+  #50 = Utf8               xi3
+  #51 = Utf8               xi4
+  #52 = Utf8               xi5
+  #53 = Utf8               as0
+  #54 = Utf8               as1
+  #55 = Utf8               ()[Ljava/lang/String;
+  #56 = Utf8               java/lang/String
+  #57 = Class              #56            // java/lang/String
+  #58 = Utf8               1
+  #59 = String             #58            // 1
+  #60 = Utf8               [Ljava/lang/String;
+  #61 = Class              #60            // "[Ljava/lang/String;"
+  #62 = Utf8               as2
+  #63 = Utf8               2
+  #64 = String             #63            // 2
+  #65 = Utf8               as3
+  #66 = Utf8               3
+  #67 = String             #66            // 3
+  #68 = Utf8               as4
+  #69 = Utf8               4
+  #70 = String             #69            // 4
+  #71 = Utf8               as5
+  #72 = Utf8               5
+  #73 = String             #72            // 5
+  #74 = Utf8               xs0
+  #75 = Utf8               xs1
+  #76 = Utf8               xs2
+  #77 = Utf8               xs3
+  #78 = Utf8               xs4
+  #79 = Utf8               xs5
+  #80 = Utf8               <init>
+  #81 = Utf8               ()V
+  #82 = NameAndType        #80:#81        // "<init>":()V
+  #83 = Methodref          #4.#82         // java/lang/Object."<init>":()V
+  #84 = Utf8               Code
+  #85 = Utf8               LocalVariableTable
+  #86 = Utf8               LineNumberTable
+  #87 = Utf8               SourceFile
+  #88 = Utf8               RuntimeVisibleAnnotations
+  #89 = Utf8               ScalaInlineInfo
+  #90 = Utf8               ScalaSig
+{
+  public java.lang.Object[] ai0();
+    descriptor: ()[Ljava/lang/Object;
+    flags: ACC_PUBLIC
+    Code:
+      stack=3, locals=1, args_size=1
+         0: getstatic     #16                 // Field scala/Array$.MODULE$:Lscala/Array$;
+         3: getstatic     #21                 // Field scala/collection/immutable/Nil$.MODULE$:Lscala/collection/immutable/Nil$;
+         6: getstatic     #26                 // Field scala/reflect/ClassTag$.MODULE$:Lscala/reflect/ClassTag$;
+         9: invokevirtual #30                 // Method scala/reflect/ClassTag$.Nothing:()Lscala/reflect/ClassTag;
+        12: invokevirtual #34                 // Method scala/Array$.apply:(Lscala/collection/Seq;Lscala/reflect/ClassTag;)Ljava/lang/Object;
+        15: checkcast     #36                 // class "[Ljava/lang/Object;"
+        18: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      19     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 4: 0
+
+  public int[] ai1();
+    descriptor: ()[I
+    flags: ACC_PUBLIC
+    Code:
+      stack=4, locals=1, args_size=1
+         0: iconst_1
+         1: newarray       int
+         3: dup
+         4: iconst_0
+         5: iconst_1
+         6: iastore
+         7: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 5: 0
+
+  public int[] ai2();
+    descriptor: ()[I
+    flags: ACC_PUBLIC
+    Code:
+      stack=4, locals=1, args_size=1
+         0: iconst_2
+         1: newarray       int
+         3: dup
+         4: iconst_0
+         5: iconst_1
+         6: iastore
+         7: dup
+         8: iconst_1
+         9: iconst_2
+        10: iastore
+        11: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      12     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 6: 0
+
+  public int[] ai3();
+    descriptor: ()[I
+    flags: ACC_PUBLIC
+    Code:
+      stack=4, locals=1, args_size=1
+         0: iconst_3
+         1: newarray       int
+         3: dup
+         4: iconst_0
+         5: iconst_1
+         6: iastore
+         7: dup
+         8: iconst_1
+         9: iconst_2
+        10: iastore
+        11: dup
+        12: iconst_2
+        13: iconst_3
+        14: iastore
+        15: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      16     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 7: 0
+
+  public int[] ai4();
+    descriptor: ()[I
+    flags: ACC_PUBLIC
+    Code:
+      stack=4, locals=1, args_size=1
+         0: iconst_4
+         1: newarray       int
+         3: dup
+         4: iconst_0
+         5: iconst_1
+         6: iastore
+         7: dup
+         8: iconst_1
+         9: iconst_2
+        10: iastore
+        11: dup
+        12: iconst_2
+        13: iconst_3
+        14: iastore
+        15: dup
+        16: iconst_3
+        17: iconst_4
+        18: iastore
+        19: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      20     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 8: 0
+
+  public int[] ai5();
+    descriptor: ()[I
+    flags: ACC_PUBLIC
+    Code:
+      stack=4, locals=1, args_size=1
+         0: iconst_5
+         1: newarray       int
+         3: dup
+         4: iconst_0
+         5: iconst_1
+         6: iastore
+         7: dup
+         8: iconst_1
+         9: iconst_2
+        10: iastore
+        11: dup
+        12: iconst_2
+        13: iconst_3
+        14: iastore
+        15: dup
+        16: iconst_3
+        17: iconst_4
+        18: iastore
+        19: dup
+        20: iconst_4
+        21: iconst_5
+        22: iastore
+        23: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      24     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 9: 0
+
+  public java.lang.Object[] xi0();
+    descriptor: ()[Ljava/lang/Object;
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: iconst_0
+         1: anewarray     #4                  // class java/lang/Object
+         4: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 12: 0
+
+  public int[] xi1();
+    descriptor: ()[I
+    flags: ACC_PUBLIC
+    Code:
+      stack=3, locals=2, args_size=1
+         0: iconst_1
+         1: newarray       int
+         3: astore_1
+         4: aload_1
+         5: iconst_0
+         6: iconst_1
+         7: iastore
+         8: aload_1
+         9: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            3       6     1     a   [I
+            0      10     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 13: 0
+
+  public int[] xi2();
+    descriptor: ()[I
+    flags: ACC_PUBLIC
+    Code:
+      stack=3, locals=2, args_size=1
+         0: iconst_2
+         1: newarray       int
+         3: astore_1
+         4: aload_1
+         5: iconst_0
+         6: iconst_1
+         7: iastore
+         8: aload_1
+         9: iconst_1
+        10: iconst_2
+        11: iastore
+        12: aload_1
+        13: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            3      10     1     a   [I
+            0      14     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 14: 0
+
+  public int[] xi3();
+    descriptor: ()[I
+    flags: ACC_PUBLIC
+    Code:
+      stack=3, locals=2, args_size=1
+         0: iconst_3
+         1: newarray       int
+         3: astore_1
+         4: aload_1
+         5: iconst_0
+         6: iconst_1
+         7: iastore
+         8: aload_1
+         9: iconst_1
+        10: iconst_2
+        11: iastore
+        12: aload_1
+        13: iconst_2
+        14: iconst_3
+        15: iastore
+        16: aload_1
+        17: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            3      14     1     a   [I
+            0      18     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 15: 0
+
+  public int[] xi4();
+    descriptor: ()[I
+    flags: ACC_PUBLIC
+    Code:
+      stack=3, locals=2, args_size=1
+         0: iconst_4
+         1: newarray       int
+         3: astore_1
+         4: aload_1
+         5: iconst_0
+         6: iconst_1
+         7: iastore
+         8: aload_1
+         9: iconst_1
+        10: iconst_2
+        11: iastore
+        12: aload_1
+        13: iconst_2
+        14: iconst_3
+        15: iastore
+        16: aload_1
+        17: iconst_3
+        18: iconst_4
+        19: iastore
+        20: aload_1
+        21: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            3      18     1     a   [I
+            0      22     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 16: 0
+
+  public int[] xi5();
+    descriptor: ()[I
+    flags: ACC_PUBLIC
+    Code:
+      stack=3, locals=2, args_size=1
+         0: iconst_5
+         1: newarray       int
+         3: astore_1
+         4: aload_1
+         5: iconst_0
+         6: iconst_1
+         7: iastore
+         8: aload_1
+         9: iconst_1
+        10: iconst_2
+        11: iastore
+        12: aload_1
+        13: iconst_2
+        14: iconst_3
+        15: iastore
+        16: aload_1
+        17: iconst_3
+        18: iconst_4
+        19: iastore
+        20: aload_1
+        21: iconst_4
+        22: iconst_5
+        23: iastore
+        24: aload_1
+        25: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            3      22     1     a   [I
+            0      26     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 17: 0
+
+  public java.lang.Object[] as0();
+    descriptor: ()[Ljava/lang/Object;
+    flags: ACC_PUBLIC
+    Code:
+      stack=3, locals=1, args_size=1
+         0: getstatic     #16                 // Field scala/Array$.MODULE$:Lscala/Array$;
+         3: getstatic     #21                 // Field scala/collection/immutable/Nil$.MODULE$:Lscala/collection/immutable/Nil$;
+         6: getstatic     #26                 // Field scala/reflect/ClassTag$.MODULE$:Lscala/reflect/ClassTag$;
+         9: invokevirtual #30                 // Method scala/reflect/ClassTag$.Nothing:()Lscala/reflect/ClassTag;
+        12: invokevirtual #34                 // Method scala/Array$.apply:(Lscala/collection/Seq;Lscala/reflect/ClassTag;)Ljava/lang/Object;
+        15: checkcast     #36                 // class "[Ljava/lang/Object;"
+        18: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      19     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 19: 0
+
+  public java.lang.String[] as1();
+    descriptor: ()[Ljava/lang/String;
+    flags: ACC_PUBLIC
+    Code:
+      stack=4, locals=1, args_size=1
+         0: iconst_1
+         1: anewarray     #57                 // class java/lang/String
+         4: dup
+         5: iconst_0
+         6: ldc           #59                 // String 1
+         8: aastore
+         9: checkcast     #36                 // class "[Ljava/lang/Object;"
+        12: checkcast     #61                 // class "[Ljava/lang/String;"
+        15: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      16     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 20: 0
+
+  public java.lang.String[] as2();
+    descriptor: ()[Ljava/lang/String;
+    flags: ACC_PUBLIC
+    Code:
+      stack=4, locals=1, args_size=1
+         0: iconst_2
+         1: anewarray     #57                 // class java/lang/String
+         4: dup
+         5: iconst_0
+         6: ldc           #59                 // String 1
+         8: aastore
+         9: dup
+        10: iconst_1
+        11: ldc           #64                 // String 2
+        13: aastore
+        14: checkcast     #36                 // class "[Ljava/lang/Object;"
+        17: checkcast     #61                 // class "[Ljava/lang/String;"
+        20: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      21     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 21: 0
+
+  public java.lang.String[] as3();
+    descriptor: ()[Ljava/lang/String;
+    flags: ACC_PUBLIC
+    Code:
+      stack=4, locals=1, args_size=1
+         0: iconst_3
+         1: anewarray     #57                 // class java/lang/String
+         4: dup
+         5: iconst_0
+         6: ldc           #59                 // String 1
+         8: aastore
+         9: dup
+        10: iconst_1
+        11: ldc           #64                 // String 2
+        13: aastore
+        14: dup
+        15: iconst_2
+        16: ldc           #67                 // String 3
+        18: aastore
+        19: checkcast     #36                 // class "[Ljava/lang/Object;"
+        22: checkcast     #61                 // class "[Ljava/lang/String;"
+        25: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      26     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 22: 0
+
+  public java.lang.String[] as4();
+    descriptor: ()[Ljava/lang/String;
+    flags: ACC_PUBLIC
+    Code:
+      stack=4, locals=1, args_size=1
+         0: iconst_4
+         1: anewarray     #57                 // class java/lang/String
+         4: dup
+         5: iconst_0
+         6: ldc           #59                 // String 1
+         8: aastore
+         9: dup
+        10: iconst_1
+        11: ldc           #64                 // String 2
+        13: aastore
+        14: dup
+        15: iconst_2
+        16: ldc           #67                 // String 3
+        18: aastore
+        19: dup
+        20: iconst_3
+        21: ldc           #70                 // String 4
+        23: aastore
+        24: checkcast     #36                 // class "[Ljava/lang/Object;"
+        27: checkcast     #61                 // class "[Ljava/lang/String;"
+        30: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      31     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 23: 0
+
+  public java.lang.String[] as5();
+    descriptor: ()[Ljava/lang/String;
+    flags: ACC_PUBLIC
+    Code:
+      stack=4, locals=1, args_size=1
+         0: iconst_5
+         1: anewarray     #57                 // class java/lang/String
+         4: dup
+         5: iconst_0
+         6: ldc           #59                 // String 1
+         8: aastore
+         9: dup
+        10: iconst_1
+        11: ldc           #64                 // String 2
+        13: aastore
+        14: dup
+        15: iconst_2
+        16: ldc           #67                 // String 3
+        18: aastore
+        19: dup
+        20: iconst_3
+        21: ldc           #70                 // String 4
+        23: aastore
+        24: dup
+        25: iconst_4
+        26: ldc           #73                 // String 5
+        28: aastore
+        29: checkcast     #36                 // class "[Ljava/lang/Object;"
+        32: checkcast     #61                 // class "[Ljava/lang/String;"
+        35: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      36     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 24: 0
+
+  public java.lang.Object[] xs0();
+    descriptor: ()[Ljava/lang/Object;
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: iconst_0
+         1: anewarray     #4                  // class java/lang/Object
+         4: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 27: 0
+
+  public java.lang.String[] xs1();
+    descriptor: ()[Ljava/lang/String;
+    flags: ACC_PUBLIC
+    Code:
+      stack=3, locals=2, args_size=1
+         0: iconst_1
+         1: anewarray     #57                 // class java/lang/String
+         4: astore_1
+         5: aload_1
+         6: iconst_0
+         7: ldc           #59                 // String 1
+         9: aastore
+        10: aload_1
+        11: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            4       7     1     a   [Ljava/lang/String;
+            0      12     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 28: 0
+
+  public java.lang.String[] xs2();
+    descriptor: ()[Ljava/lang/String;
+    flags: ACC_PUBLIC
+    Code:
+      stack=3, locals=2, args_size=1
+         0: iconst_2
+         1: anewarray     #57                 // class java/lang/String
+         4: astore_1
+         5: aload_1
+         6: iconst_0
+         7: ldc           #59                 // String 1
+         9: aastore
+        10: aload_1
+        11: iconst_1
+        12: ldc           #64                 // String 2
+        14: aastore
+        15: aload_1
+        16: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            4      12     1     a   [Ljava/lang/String;
+            0      17     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 29: 0
+
+  public java.lang.String[] xs3();
+    descriptor: ()[Ljava/lang/String;
+    flags: ACC_PUBLIC
+    Code:
+      stack=3, locals=2, args_size=1
+         0: iconst_3
+         1: anewarray     #57                 // class java/lang/String
+         4: astore_1
+         5: aload_1
+         6: iconst_0
+         7: ldc           #59                 // String 1
+         9: aastore
+        10: aload_1
+        11: iconst_1
+        12: ldc           #64                 // String 2
+        14: aastore
+        15: aload_1
+        16: iconst_2
+        17: ldc           #67                 // String 3
+        19: aastore
+        20: aload_1
+        21: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            4      17     1     a   [Ljava/lang/String;
+            0      22     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 30: 0
+
+  public java.lang.String[] xs4();
+    descriptor: ()[Ljava/lang/String;
+    flags: ACC_PUBLIC
+    Code:
+      stack=3, locals=2, args_size=1
+         0: iconst_4
+         1: anewarray     #57                 // class java/lang/String
+         4: astore_1
+         5: aload_1
+         6: iconst_0
+         7: ldc           #59                 // String 1
+         9: aastore
+        10: aload_1
+        11: iconst_1
+        12: ldc           #64                 // String 2
+        14: aastore
+        15: aload_1
+        16: iconst_2
+        17: ldc           #67                 // String 3
+        19: aastore
+        20: aload_1
+        21: iconst_3
+        22: ldc           #70                 // String 4
+        24: aastore
+        25: aload_1
+        26: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            4      22     1     a   [Ljava/lang/String;
+            0      27     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 31: 0
+
+  public java.lang.String[] xs5();
+    descriptor: ()[Ljava/lang/String;
+    flags: ACC_PUBLIC
+    Code:
+      stack=3, locals=2, args_size=1
+         0: iconst_5
+         1: anewarray     #57                 // class java/lang/String
+         4: astore_1
+         5: aload_1
+         6: iconst_0
+         7: ldc           #59                 // String 1
+         9: aastore
+        10: aload_1
+        11: iconst_1
+        12: ldc           #64                 // String 2
+        14: aastore
+        15: aload_1
+        16: iconst_2
+        17: ldc           #67                 // String 3
+        19: aastore
+        20: aload_1
+        21: iconst_3
+        22: ldc           #70                 // String 4
+        24: aastore
+        25: aload_1
+        26: iconst_4
+        27: ldc           #73                 // String 5
+        29: aastore
+        30: aload_1
+        31: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            4      27     1     a   [Ljava/lang/String;
+            0      32     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 32: 0
+
+  public t.Bytecode();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #83                 // Method java/lang/Object."<init>":()V
+         4: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 33: 0
+        line 3: 4
+}
+SourceFile: "<pastie>"
+RuntimeVisibleAnnotations:
+  0: #6(#7=s#8)
+Error: unknown attribute
+  ScalaInlineInfo: length = 0x81
+   01 00 00 19 00 50 00 51 00 00 09 00 0A 00 00 27
+   00 28 00 00 29 00 28 00 00 2A 00 28 00 00 2B 00
+   28 00 00 2C 00 28 00 00 35 00 0A 00 00 36 00 37
+   00 00 3E 00 37 00 00 41 00 37 00 00 44 00 37 00
+   00 47 00 37 00 00 2D 00 0A 00 00 2E 00 28 00 00
+   31 00 28 00 00 32 00 28 00 00 33 00 28 00 00 34
+   00 28 00 00 4A 00 0A 00 00 4B 00 37 00 00 4C 00
+   37 00 00 4D 00 37 00 00 4E 00 37 00 00 4F 00 37
+   00
+Error: unknown attribute
+  ScalaSig: length = 0x3
+   05 00 00
+
+scala>
