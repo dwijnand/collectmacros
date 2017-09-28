@@ -48,15 +48,15 @@ final class Desugar(val c: blackbox.Context) {
 
 object `package` {
 
-  implicit class ListExt(val companion: List.type) {
+  implicit class ListExt(val companion: List.type) extends AnyVal {
     def construct[A](xs: A*): List[A] = macro xList.applyImpl[A]
   }
 
-  implicit class VectorExt(val companion: Vector.type) {
+  implicit class VectorExt(val companion: Vector.type) extends AnyVal {
     def construct[A](xs: A*): Vector[A] = macro xVector.applyImpl[A]
   }
 
-  implicit class ArrayExt(val companion: Array.type) {
+  implicit class ArrayExt(val companion: Array.type) extends AnyVal {
     def construct[A](xs: A*): Array[A] = macro xArray.applyImpl[A]
   }
 
