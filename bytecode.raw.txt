@@ -1,0 +1,1425 @@
+> console
+[info] Starting scala interpreter...
+Welcome to Scala 2.12.3 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_144).
+Type in expressions for evaluation. Or try :help.
+
+scala> :pa -raw
+// Entering paste mode (ctrl-D to finish)
+
+package t
+class Bytecode {
+  def l0 = List()
+  def l1 = List("1")
+  def l2 = List("1", "2")
+  def l3 = List("1", "2", "3")
+  def l4 = List("1", "2", "3", "4")
+  def l5 = List("1", "2", "3", "4", "5")
+
+  import collectmacros._
+  def x0 = xList()
+  def x1 = xList("1")
+  def x2 = xList("1", "2")
+  def x3 = xList("1", "2", "3")
+  def x4 = xList("1", "2", "3", "4")
+  def x5 = xList("1", "2", "3", "4", "5")
+}
+
+
+// Exiting paste mode, now interpreting.
+
+
+scala> :javap t.Bytecode
+
+scala> :javap t.Bytecode
+  Size 2829 bytes
+  MD5 checksum 8f04807782222b1aef66982f7b54b2ce
+  Compiled from "<pastie>"
+public class t.Bytecode
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Utf8               t/Bytecode
+   #2 = Class              #1             // t/Bytecode
+   #3 = Utf8               java/lang/Object
+   #4 = Class              #3             // java/lang/Object
+   #5 = Utf8               <pastie>
+   #6 = Utf8               Lscala/reflect/ScalaSignature;
+   #7 = Utf8               bytes
+   #8 = Utf8               53A!
+                               \tA!);fG>$WMC!8A\n\"a!Q!Cg
+                                                         G.Y!a!8z%4\"B\tqAj]&$F!\t!D\"\ta'F!\r)\"H-)qG\nS6lW^1cYT!!\r|G\3di&|g.-\t!A*[:u!\t9Q$\t9aj;iS:<\"\t\tA72+cA
+                                                                                                                                                                    AA%KK)aeJYtwMC)QM^1\n)*#AB*ue&tw\rC-%me!)aCCAn\ra!\t!IYRBQA\r\n!\t
+                                                         QAAaT#]zDD9{Pu)ByI|w \n%I!AA
+                                                                                     7m[1hK&1}!AQA\r
+                                                                                                    !_2aN $1\"D\tA(CI1)yg!)!\nC!\taQqV
+   #9 = Utf8               l0
+  #10 = Utf8               ()Lscala/collection/immutable/List;
+  #11 = Utf8               scala/collection/immutable/Nil$
+  #12 = Class              #11            // scala/collection/immutable/Nil$
+  #13 = Utf8               MODULE$
+  #14 = Utf8               Lscala/collection/immutable/Nil$;
+  #15 = NameAndType        #13:#14        // MODULE$:Lscala/collection/immutable/Nil$;
+  #16 = Fieldref           #12.#15        // scala/collection/immutable/Nil$.MODULE$:Lscala/collection/immutable/Nil$;
+  #17 = Utf8               this
+  #18 = Utf8               Lt/Bytecode;
+  #19 = Utf8               l1
+  #20 = Utf8               scala/collection/immutable/List$
+  #21 = Class              #20            // scala/collection/immutable/List$
+  #22 = Utf8               Lscala/collection/immutable/List$;
+  #23 = NameAndType        #13:#22        // MODULE$:Lscala/collection/immutable/List$;
+  #24 = Fieldref           #21.#23        // scala/collection/immutable/List$.MODULE$:Lscala/collection/immutable/List$;
+  #25 = Utf8               scala/Predef$
+  #26 = Class              #25            // scala/Predef$
+  #27 = Utf8               Lscala/Predef$;
+  #28 = NameAndType        #13:#27        // MODULE$:Lscala/Predef$;
+  #29 = Fieldref           #26.#28        // scala/Predef$.MODULE$:Lscala/Predef$;
+  #30 = Utf8               java/lang/String
+  #31 = Class              #30            // java/lang/String
+  #32 = Utf8               1
+  #33 = String             #32            // 1
+  #34 = Utf8               [Ljava/lang/Object;
+  #35 = Class              #34            // "[Ljava/lang/Object;"
+  #36 = Utf8               wrapRefArray
+  #37 = Utf8               ([Ljava/lang/Object;)Lscala/collection/mutable/WrappedArray;
+  #38 = NameAndType        #36:#37        // wrapRefArray:([Ljava/lang/Object;)Lscala/collection/mutable/WrappedArray;
+  #39 = Methodref          #26.#38        // scala/Predef$.wrapRefArray:([Ljava/lang/Object;)Lscala/collection/mutable/WrappedArray;
+  #40 = Utf8               apply
+  #41 = Utf8               (Lscala/collection/Seq;)Lscala/collection/immutable/List;
+  #42 = NameAndType        #40:#41        // apply:(Lscala/collection/Seq;)Lscala/collection/immutable/List;
+  #43 = Methodref          #21.#42        // scala/collection/immutable/List$.apply:(Lscala/collection/Seq;)Lscala/collection/immutable/List;
+  #44 = Utf8               l2
+  #45 = Utf8               2
+  #46 = String             #45            // 2
+  #47 = Utf8               l3
+  #48 = Utf8               3
+  #49 = String             #48            // 3
+  #50 = Utf8               l4
+  #51 = Utf8               4
+  #52 = String             #51            // 4
+  #53 = Utf8               l5
+  #54 = Utf8               5
+  #55 = String             #54            // 5
+  #56 = Utf8               x0
+  #57 = Utf8               x1
+  #58 = Utf8               scala/collection/immutable/$colon$colon
+  #59 = Class              #58            // scala/collection/immutable/$colon$colon
+  #60 = Utf8               <init>
+  #61 = Utf8               (Ljava/lang/Object;Lscala/collection/immutable/List;)V
+  #62 = NameAndType        #60:#61        // "<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+  #63 = Methodref          #59.#62        // scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+  #64 = Utf8               x2
+  #65 = Utf8               x3
+  #66 = Utf8               x4
+  #67 = Utf8               x5
+  #68 = Utf8               ()V
+  #69 = NameAndType        #60:#68        // "<init>":()V
+  #70 = Methodref          #4.#69         // java/lang/Object."<init>":()V
+  #71 = Utf8               Code
+  #72 = Utf8               LocalVariableTable
+  #73 = Utf8               LineNumberTable
+  #74 = Utf8               Signature
+  #75 = Utf8               ()Lscala/collection/immutable/List<Lscala/runtime/Nothing$;>;
+  #76 = Utf8               ()Lscala/collection/immutable/List<Ljava/lang/String;>;
+  #77 = Utf8               SourceFile
+  #78 = Utf8               RuntimeVisibleAnnotations
+  #79 = Utf8               ScalaInlineInfo
+  #80 = Utf8               ScalaSig
+{
+  public scala.collection.immutable.List<scala.runtime.Nothing$> l0();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: getstatic     #16                 // Field scala/collection/immutable/Nil$.MODULE$:Lscala/collection/immutable/Nil$;
+         3: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       4     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 3: 0
+    Signature: #75                          // ()Lscala/collection/immutable/List<Lscala/runtime/Nothing$;>;
+
+  public scala.collection.immutable.List<java.lang.String> l1();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=6, locals=1, args_size=1
+         0: getstatic     #24                 // Field scala/collection/immutable/List$.MODULE$:Lscala/collection/immutable/List$;
+         3: getstatic     #29                 // Field scala/Predef$.MODULE$:Lscala/Predef$;
+         6: iconst_1
+         7: anewarray     #31                 // class java/lang/String
+        10: dup
+        11: iconst_0
+        12: ldc           #33                 // String 1
+        14: aastore
+        15: checkcast     #35                 // class "[Ljava/lang/Object;"
+        18: invokevirtual #39                 // Method scala/Predef$.wrapRefArray:([Ljava/lang/Object;)Lscala/collection/mutable/WrappedArray;
+        21: invokevirtual #43                 // Method scala/collection/immutable/List$.apply:(Lscala/collection/Seq;)Lscala/collection/immutable/List;
+        24: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      25     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 4: 0
+    Signature: #76                          // ()Lscala/collection/immutable/List<Ljava/lang/String;>;
+
+  public scala.collection.immutable.List<java.lang.String> l2();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=6, locals=1, args_size=1
+         0: getstatic     #24                 // Field scala/collection/immutable/List$.MODULE$:Lscala/collection/immutable/List$;
+         3: getstatic     #29                 // Field scala/Predef$.MODULE$:Lscala/Predef$;
+         6: iconst_2
+         7: anewarray     #31                 // class java/lang/String
+        10: dup
+        11: iconst_0
+        12: ldc           #33                 // String 1
+        14: aastore
+        15: dup
+        16: iconst_1
+        17: ldc           #46                 // String 2
+        19: aastore
+        20: checkcast     #35                 // class "[Ljava/lang/Object;"
+        23: invokevirtual #39                 // Method scala/Predef$.wrapRefArray:([Ljava/lang/Object;)Lscala/collection/mutable/WrappedArray;
+        26: invokevirtual #43                 // Method scala/collection/immutable/List$.apply:(Lscala/collection/Seq;)Lscala/collection/immutable/List;
+        29: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      30     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 5: 0
+    Signature: #76                          // ()Lscala/collection/immutable/List<Ljava/lang/String;>;
+
+  public scala.collection.immutable.List<java.lang.String> l3();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=6, locals=1, args_size=1
+         0: getstatic     #24                 // Field scala/collection/immutable/List$.MODULE$:Lscala/collection/immutable/List$;
+         3: getstatic     #29                 // Field scala/Predef$.MODULE$:Lscala/Predef$;
+         6: iconst_3
+         7: anewarray     #31                 // class java/lang/String
+        10: dup
+        11: iconst_0
+        12: ldc           #33                 // String 1
+        14: aastore
+        15: dup
+        16: iconst_1
+        17: ldc           #46                 // String 2
+        19: aastore
+        20: dup
+        21: iconst_2
+        22: ldc           #49                 // String 3
+        24: aastore
+        25: checkcast     #35                 // class "[Ljava/lang/Object;"
+        28: invokevirtual #39                 // Method scala/Predef$.wrapRefArray:([Ljava/lang/Object;)Lscala/collection/mutable/WrappedArray;
+        31: invokevirtual #43                 // Method scala/collection/immutable/List$.apply:(Lscala/collection/Seq;)Lscala/collection/immutable/List;
+        34: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      35     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 6: 0
+    Signature: #76                          // ()Lscala/collection/immutable/List<Ljava/lang/String;>;
+
+  public scala.collection.immutable.List<java.lang.String> l4();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=6, locals=1, args_size=1
+         0: getstatic     #24                 // Field scala/collection/immutable/List$.MODULE$:Lscala/collection/immutable/List$;
+         3: getstatic     #29                 // Field scala/Predef$.MODULE$:Lscala/Predef$;
+         6: iconst_4
+         7: anewarray     #31                 // class java/lang/String
+        10: dup
+        11: iconst_0
+        12: ldc           #33                 // String 1
+        14: aastore
+        15: dup
+        16: iconst_1
+        17: ldc           #46                 // String 2
+        19: aastore
+        20: dup
+        21: iconst_2
+        22: ldc           #49                 // String 3
+        24: aastore
+        25: dup
+        26: iconst_3
+        27: ldc           #52                 // String 4
+        29: aastore
+        30: checkcast     #35                 // class "[Ljava/lang/Object;"
+        33: invokevirtual #39                 // Method scala/Predef$.wrapRefArray:([Ljava/lang/Object;)Lscala/collection/mutable/WrappedArray;
+        36: invokevirtual #43                 // Method scala/collection/immutable/List$.apply:(Lscala/collection/Seq;)Lscala/collection/immutable/List;
+        39: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      40     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 7: 0
+    Signature: #76                          // ()Lscala/collection/immutable/List<Ljava/lang/String;>;
+
+  public scala.collection.immutable.List<java.lang.String> l5();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=6, locals=1, args_size=1
+         0: getstatic     #24                 // Field scala/collection/immutable/List$.MODULE$:Lscala/collection/immutable/List$;
+         3: getstatic     #29                 // Field scala/Predef$.MODULE$:Lscala/Predef$;
+         6: iconst_5
+         7: anewarray     #31                 // class java/lang/String
+        10: dup
+        11: iconst_0
+        12: ldc           #33                 // String 1
+        14: aastore
+        15: dup
+        16: iconst_1
+        17: ldc           #46                 // String 2
+        19: aastore
+        20: dup
+        21: iconst_2
+        22: ldc           #49                 // String 3
+        24: aastore
+        25: dup
+        26: iconst_3
+        27: ldc           #52                 // String 4
+        29: aastore
+        30: dup
+        31: iconst_4
+        32: ldc           #55                 // String 5
+        34: aastore
+        35: checkcast     #35                 // class "[Ljava/lang/Object;"
+        38: invokevirtual #39                 // Method scala/Predef$.wrapRefArray:([Ljava/lang/Object;)Lscala/collection/mutable/WrappedArray;
+        41: invokevirtual #43                 // Method scala/collection/immutable/List$.apply:(Lscala/collection/Seq;)Lscala/collection/immutable/List;
+        44: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      45     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 8: 0
+    Signature: #76                          // ()Lscala/collection/immutable/List<Ljava/lang/String;>;
+
+  public scala.collection.immutable.List<scala.runtime.Nothing$> x0();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: getstatic     #16                 // Field scala/collection/immutable/Nil$.MODULE$:Lscala/collection/immutable/Nil$;
+         3: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       4     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 11: 0
+    Signature: #75                          // ()Lscala/collection/immutable/List<Lscala/runtime/Nothing$;>;
+
+  public scala.collection.immutable.List<java.lang.String> x1();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=4, locals=1, args_size=1
+         0: new           #59                 // class scala/collection/immutable/$colon$colon
+         3: dup
+         4: ldc           #33                 // String 1
+         6: getstatic     #16                 // Field scala/collection/immutable/Nil$.MODULE$:Lscala/collection/immutable/Nil$;
+         9: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        12: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      13     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 12: 0
+    Signature: #76                          // ()Lscala/collection/immutable/List<Ljava/lang/String;>;
+
+  public scala.collection.immutable.List<java.lang.String> x2();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=7, locals=1, args_size=1
+         0: new           #59                 // class scala/collection/immutable/$colon$colon
+         3: dup
+         4: ldc           #33                 // String 1
+         6: new           #59                 // class scala/collection/immutable/$colon$colon
+         9: dup
+        10: ldc           #46                 // String 2
+        12: getstatic     #16                 // Field scala/collection/immutable/Nil$.MODULE$:Lscala/collection/immutable/Nil$;
+        15: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        18: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        21: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      22     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 13: 0
+    Signature: #76                          // ()Lscala/collection/immutable/List<Ljava/lang/String;>;
+
+  public scala.collection.immutable.List<java.lang.String> x3();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=10, locals=1, args_size=1
+         0: new           #59                 // class scala/collection/immutable/$colon$colon
+         3: dup
+         4: ldc           #33                 // String 1
+         6: new           #59                 // class scala/collection/immutable/$colon$colon
+         9: dup
+        10: ldc           #46                 // String 2
+        12: new           #59                 // class scala/collection/immutable/$colon$colon
+        15: dup
+        16: ldc           #49                 // String 3
+        18: getstatic     #16                 // Field scala/collection/immutable/Nil$.MODULE$:Lscala/collection/immutable/Nil$;
+        21: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        24: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        27: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        30: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      31     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 14: 0
+    Signature: #76                          // ()Lscala/collection/immutable/List<Ljava/lang/String;>;
+
+  public scala.collection.immutable.List<java.lang.String> x4();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=13, locals=1, args_size=1
+         0: new           #59                 // class scala/collection/immutable/$colon$colon
+         3: dup
+         4: ldc           #33                 // String 1
+         6: new           #59                 // class scala/collection/immutable/$colon$colon
+         9: dup
+        10: ldc           #46                 // String 2
+        12: new           #59                 // class scala/collection/immutable/$colon$colon
+        15: dup
+        16: ldc           #49                 // String 3
+        18: new           #59                 // class scala/collection/immutable/$colon$colon
+        21: dup
+        22: ldc           #52                 // String 4
+        24: getstatic     #16                 // Field scala/collection/immutable/Nil$.MODULE$:Lscala/collection/immutable/Nil$;
+        27: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        30: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        33: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        36: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        39: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      40     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 15: 0
+    Signature: #76                          // ()Lscala/collection/immutable/List<Ljava/lang/String;>;
+
+  public scala.collection.immutable.List<java.lang.String> x5();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=16, locals=1, args_size=1
+         0: new           #59                 // class scala/collection/immutable/$colon$colon
+         3: dup
+         4: ldc           #33                 // String 1
+         6: new           #59                 // class scala/collection/immutable/$colon$colon
+         9: dup
+        10: ldc           #46                 // String 2
+        12: new           #59                 // class scala/collection/immutable/$colon$colon
+        15: dup
+        16: ldc           #49                 // String 3
+        18: new           #59                 // class scala/collection/immutable/$colon$colon
+        21: dup
+        22: ldc           #52                 // String 4
+        24: new           #59                 // class scala/collection/immutable/$colon$colon
+        27: dup
+        28: ldc           #55                 // String 5
+        30: getstatic     #16                 // Field scala/collection/immutable/Nil$.MODULE$:Lscala/collection/immutable/Nil$;
+        33: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        36: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        39: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        42: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        45: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        48: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      49     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 16: 0
+    Signature: #76                          // ()Lscala/collection/immutable/List<Ljava/lang/String;>;
+
+  public t.Bytecode();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #70                 // Method java/lang/Object."<init>":()V
+         4: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 17: 0
+        line 2: 4
+}
+SourceFile: "<pastie>"
+RuntimeVisibleAnnotations:
+  0: #6(#7=s#8)
+Error: unknown attribute
+  ScalaInlineInfo: length = 0x45
+   01 00 00 0D 00 3C 00 44 00 00 09 00 0A 00 00 13
+   00 0A 00 00 2C 00 0A 00 00 2F 00 0A 00 00 32 00
+   0A 00 00 35 00 0A 00 00 38 00 0A 00 00 39 00 0A
+   00 00 40 00 0A 00 00 41 00 0A 00 00 42 00 0A 00
+   00 43 00 0A 00
+Error: unknown attribute
+  ScalaSig: length = 0x3
+   05 00 00
+
+scala>
+
+scala>
+[success] Total time: 250 s, completed 28-Sep-2017 14:35:50
+> console
+[info] Starting scala interpreter...
+Welcome to Scala 2.12.3 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_144).
+Type in expressions for evaluation. Or try :help.
+
+scala> :paste -raw
+// Entering paste mode (ctrl-D to finish)
+
+package t
+
+class Bytecode {
+  def l0 = List()
+  def l1 = List(1)
+  def l2 = List(1, 2)
+  def l3 = List(1, 2, 3)
+  def l4 = List(1, 2, 3, 4)
+  def l5 = List(1, 2, 3, 4, 5)
+
+  import collectmacros._
+  def x0 = xList()
+  def x1 = xList(1)
+  def x2 = xList(1, 2)
+  def x3 = xList(1, 2, 3)
+  def x4 = xList(1, 2, 3, 4)
+  def x5 = xList(1, 2, 3, 4, 5)
+}
+
+// Exiting paste mode, now interpreting.
+
+
+scala> :javap t.Bytecode
+  Size 2778 bytes
+  MD5 checksum bb622ad5b63200ec96bd7ee9d5304a85
+  Compiled from "<pastie>"
+public class t.Bytecode
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Utf8               t/Bytecode
+   #2 = Class              #1             // t/Bytecode
+   #3 = Utf8               java/lang/Object
+   #4 = Class              #3             // java/lang/Object
+   #5 = Utf8               <pastie>
+   #6 = Utf8               Lscala/reflect/ScalaSignature;
+   #7 = Utf8               bytes
+   #8 = Utf8               !3A!
+                               \tA!);fG>$WMC!8A\n\"a!Q!Cg
+                                                         G.Y!a!8z%4\"B\tqAj]&$F!\t!D\"\ta'F!\r)\"H-)qG\nS6lW^1cYT!!\r|G\3di&|g.-\t!A*[:u!\t9Q$\t9aj;iS:<\"\t\tA72+cA
+                                                                                                                                                                    AqJK!1!8u9\"\"\ta'C*%mg!)1CCA[!\t!IYVBQa
+                               A\n!E2A\r\tH5o5\tQG7\t1AH]8pizJ!Cs!\tq]1dW<W-w{!\tAPqF*a\tei\"B!\tqA=3\"?\tA8CFa(yi!)q\tC}0
+   #9 = Utf8               l0
+  #10 = Utf8               ()Lscala/collection/immutable/List;
+  #11 = Utf8               scala/collection/immutable/Nil$
+  #12 = Class              #11            // scala/collection/immutable/Nil$
+  #13 = Utf8               MODULE$
+  #14 = Utf8               Lscala/collection/immutable/Nil$;
+  #15 = NameAndType        #13:#14        // MODULE$:Lscala/collection/immutable/Nil$;
+  #16 = Fieldref           #12.#15        // scala/collection/immutable/Nil$.MODULE$:Lscala/collection/immutable/Nil$;
+  #17 = Utf8               this
+  #18 = Utf8               Lt/Bytecode;
+  #19 = Utf8               l1
+  #20 = Utf8               scala/collection/immutable/List$
+  #21 = Class              #20            // scala/collection/immutable/List$
+  #22 = Utf8               Lscala/collection/immutable/List$;
+  #23 = NameAndType        #13:#22        // MODULE$:Lscala/collection/immutable/List$;
+  #24 = Fieldref           #21.#23        // scala/collection/immutable/List$.MODULE$:Lscala/collection/immutable/List$;
+  #25 = Utf8               scala/Predef$
+  #26 = Class              #25            // scala/Predef$
+  #27 = Utf8               Lscala/Predef$;
+  #28 = NameAndType        #13:#27        // MODULE$:Lscala/Predef$;
+  #29 = Fieldref           #26.#28        // scala/Predef$.MODULE$:Lscala/Predef$;
+  #30 = Utf8               wrapIntArray
+  #31 = Utf8               ([I)Lscala/collection/mutable/WrappedArray;
+  #32 = NameAndType        #30:#31        // wrapIntArray:([I)Lscala/collection/mutable/WrappedArray;
+  #33 = Methodref          #26.#32        // scala/Predef$.wrapIntArray:([I)Lscala/collection/mutable/WrappedArray;
+  #34 = Utf8               apply
+  #35 = Utf8               (Lscala/collection/Seq;)Lscala/collection/immutable/List;
+  #36 = NameAndType        #34:#35        // apply:(Lscala/collection/Seq;)Lscala/collection/immutable/List;
+  #37 = Methodref          #21.#36        // scala/collection/immutable/List$.apply:(Lscala/collection/Seq;)Lscala/collection/immutable/List;
+  #38 = Utf8               l2
+  #39 = Utf8               l3
+  #40 = Utf8               l4
+  #41 = Utf8               l5
+  #42 = Utf8               x0
+  #43 = Utf8               x1
+  #44 = Utf8               scala/collection/immutable/$colon$colon
+  #45 = Class              #44            // scala/collection/immutable/$colon$colon
+  #46 = Utf8               scala/runtime/BoxesRunTime
+  #47 = Class              #46            // scala/runtime/BoxesRunTime
+  #48 = Utf8               boxToInteger
+  #49 = Utf8               (I)Ljava/lang/Integer;
+  #50 = NameAndType        #48:#49        // boxToInteger:(I)Ljava/lang/Integer;
+  #51 = Methodref          #47.#50        // scala/runtime/BoxesRunTime.boxToInteger:(I)Ljava/lang/Integer;
+  #52 = Utf8               <init>
+  #53 = Utf8               (Ljava/lang/Object;Lscala/collection/immutable/List;)V
+  #54 = NameAndType        #52:#53        // "<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+  #55 = Methodref          #45.#54        // scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+  #56 = Utf8               x2
+  #57 = Utf8               x3
+  #58 = Utf8               x4
+  #59 = Utf8               x5
+  #60 = Utf8               ()V
+  #61 = NameAndType        #52:#60        // "<init>":()V
+  #62 = Methodref          #4.#61         // java/lang/Object."<init>":()V
+  #63 = Utf8               Code
+  #64 = Utf8               LocalVariableTable
+  #65 = Utf8               LineNumberTable
+  #66 = Utf8               Signature
+  #67 = Utf8               ()Lscala/collection/immutable/List<Lscala/runtime/Nothing$;>;
+  #68 = Utf8               ()Lscala/collection/immutable/List<Ljava/lang/Object;>;
+  #69 = Utf8               SourceFile
+  #70 = Utf8               RuntimeVisibleAnnotations
+  #71 = Utf8               ScalaInlineInfo
+  #72 = Utf8               ScalaSig
+{
+  public scala.collection.immutable.List<scala.runtime.Nothing$> l0();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: getstatic     #16                 // Field scala/collection/immutable/Nil$.MODULE$:Lscala/collection/immutable/Nil$;
+         3: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       4     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 4: 0
+    Signature: #67                          // ()Lscala/collection/immutable/List<Lscala/runtime/Nothing$;>;
+
+  public scala.collection.immutable.List<java.lang.Object> l1();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=6, locals=1, args_size=1
+         0: getstatic     #24                 // Field scala/collection/immutable/List$.MODULE$:Lscala/collection/immutable/List$;
+         3: getstatic     #29                 // Field scala/Predef$.MODULE$:Lscala/Predef$;
+         6: iconst_1
+         7: newarray       int
+         9: dup
+        10: iconst_0
+        11: iconst_1
+        12: iastore
+        13: invokevirtual #33                 // Method scala/Predef$.wrapIntArray:([I)Lscala/collection/mutable/WrappedArray;
+        16: invokevirtual #37                 // Method scala/collection/immutable/List$.apply:(Lscala/collection/Seq;)Lscala/collection/immutable/List;
+        19: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      20     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 5: 0
+    Signature: #68                          // ()Lscala/collection/immutable/List<Ljava/lang/Object;>;
+
+  public scala.collection.immutable.List<java.lang.Object> l2();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=6, locals=1, args_size=1
+         0: getstatic     #24                 // Field scala/collection/immutable/List$.MODULE$:Lscala/collection/immutable/List$;
+         3: getstatic     #29                 // Field scala/Predef$.MODULE$:Lscala/Predef$;
+         6: iconst_2
+         7: newarray       int
+         9: dup
+        10: iconst_0
+        11: iconst_1
+        12: iastore
+        13: dup
+        14: iconst_1
+        15: iconst_2
+        16: iastore
+        17: invokevirtual #33                 // Method scala/Predef$.wrapIntArray:([I)Lscala/collection/mutable/WrappedArray;
+        20: invokevirtual #37                 // Method scala/collection/immutable/List$.apply:(Lscala/collection/Seq;)Lscala/collection/immutable/List;
+        23: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      24     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 6: 0
+    Signature: #68                          // ()Lscala/collection/immutable/List<Ljava/lang/Object;>;
+
+  public scala.collection.immutable.List<java.lang.Object> l3();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=6, locals=1, args_size=1
+         0: getstatic     #24                 // Field scala/collection/immutable/List$.MODULE$:Lscala/collection/immutable/List$;
+         3: getstatic     #29                 // Field scala/Predef$.MODULE$:Lscala/Predef$;
+         6: iconst_3
+         7: newarray       int
+         9: dup
+        10: iconst_0
+        11: iconst_1
+        12: iastore
+        13: dup
+        14: iconst_1
+        15: iconst_2
+        16: iastore
+        17: dup
+        18: iconst_2
+        19: iconst_3
+        20: iastore
+        21: invokevirtual #33                 // Method scala/Predef$.wrapIntArray:([I)Lscala/collection/mutable/WrappedArray;
+        24: invokevirtual #37                 // Method scala/collection/immutable/List$.apply:(Lscala/collection/Seq;)Lscala/collection/immutable/List;
+        27: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      28     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 7: 0
+    Signature: #68                          // ()Lscala/collection/immutable/List<Ljava/lang/Object;>;
+
+  public scala.collection.immutable.List<java.lang.Object> l4();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=6, locals=1, args_size=1
+         0: getstatic     #24                 // Field scala/collection/immutable/List$.MODULE$:Lscala/collection/immutable/List$;
+         3: getstatic     #29                 // Field scala/Predef$.MODULE$:Lscala/Predef$;
+         6: iconst_4
+         7: newarray       int
+         9: dup
+        10: iconst_0
+        11: iconst_1
+        12: iastore
+        13: dup
+        14: iconst_1
+        15: iconst_2
+        16: iastore
+        17: dup
+        18: iconst_2
+        19: iconst_3
+        20: iastore
+        21: dup
+        22: iconst_3
+        23: iconst_4
+        24: iastore
+        25: invokevirtual #33                 // Method scala/Predef$.wrapIntArray:([I)Lscala/collection/mutable/WrappedArray;
+        28: invokevirtual #37                 // Method scala/collection/immutable/List$.apply:(Lscala/collection/Seq;)Lscala/collection/immutable/List;
+        31: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      32     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 8: 0
+    Signature: #68                          // ()Lscala/collection/immutable/List<Ljava/lang/Object;>;
+
+  public scala.collection.immutable.List<java.lang.Object> l5();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=6, locals=1, args_size=1
+         0: getstatic     #24                 // Field scala/collection/immutable/List$.MODULE$:Lscala/collection/immutable/List$;
+         3: getstatic     #29                 // Field scala/Predef$.MODULE$:Lscala/Predef$;
+         6: iconst_5
+         7: newarray       int
+         9: dup
+        10: iconst_0
+        11: iconst_1
+        12: iastore
+        13: dup
+        14: iconst_1
+        15: iconst_2
+        16: iastore
+        17: dup
+        18: iconst_2
+        19: iconst_3
+        20: iastore
+        21: dup
+        22: iconst_3
+        23: iconst_4
+        24: iastore
+        25: dup
+        26: iconst_4
+        27: iconst_5
+        28: iastore
+        29: invokevirtual #33                 // Method scala/Predef$.wrapIntArray:([I)Lscala/collection/mutable/WrappedArray;
+        32: invokevirtual #37                 // Method scala/collection/immutable/List$.apply:(Lscala/collection/Seq;)Lscala/collection/immutable/List;
+        35: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      36     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 9: 0
+    Signature: #68                          // ()Lscala/collection/immutable/List<Ljava/lang/Object;>;
+
+  public scala.collection.immutable.List<scala.runtime.Nothing$> x0();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: getstatic     #16                 // Field scala/collection/immutable/Nil$.MODULE$:Lscala/collection/immutable/Nil$;
+         3: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       4     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 12: 0
+    Signature: #67                          // ()Lscala/collection/immutable/List<Lscala/runtime/Nothing$;>;
+
+  public scala.collection.immutable.List<java.lang.Object> x1();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=4, locals=1, args_size=1
+         0: new           #45                 // class scala/collection/immutable/$colon$colon
+         3: dup
+         4: iconst_1
+         5: invokestatic  #51                 // Method scala/runtime/BoxesRunTime.boxToInteger:(I)Ljava/lang/Integer;
+         8: getstatic     #16                 // Field scala/collection/immutable/Nil$.MODULE$:Lscala/collection/immutable/Nil$;
+        11: invokespecial #55                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        14: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      15     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 13: 0
+    Signature: #68                          // ()Lscala/collection/immutable/List<Ljava/lang/Object;>;
+
+  public scala.collection.immutable.List<java.lang.Object> x2();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=7, locals=1, args_size=1
+         0: new           #45                 // class scala/collection/immutable/$colon$colon
+         3: dup
+         4: iconst_1
+         5: invokestatic  #51                 // Method scala/runtime/BoxesRunTime.boxToInteger:(I)Ljava/lang/Integer;
+         8: new           #45                 // class scala/collection/immutable/$colon$colon
+        11: dup
+        12: iconst_2
+        13: invokestatic  #51                 // Method scala/runtime/BoxesRunTime.boxToInteger:(I)Ljava/lang/Integer;
+        16: getstatic     #16                 // Field scala/collection/immutable/Nil$.MODULE$:Lscala/collection/immutable/Nil$;
+        19: invokespecial #55                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        22: invokespecial #55                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        25: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      26     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 14: 0
+    Signature: #68                          // ()Lscala/collection/immutable/List<Ljava/lang/Object;>;
+
+  public scala.collection.immutable.List<java.lang.Object> x3();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=10, locals=1, args_size=1
+         0: new           #45                 // class scala/collection/immutable/$colon$colon
+         3: dup
+         4: iconst_1
+         5: invokestatic  #51                 // Method scala/runtime/BoxesRunTime.boxToInteger:(I)Ljava/lang/Integer;
+         8: new           #45                 // class scala/collection/immutable/$colon$colon
+        11: dup
+        12: iconst_2
+        13: invokestatic  #51                 // Method scala/runtime/BoxesRunTime.boxToInteger:(I)Ljava/lang/Integer;
+        16: new           #45                 // class scala/collection/immutable/$colon$colon
+        19: dup
+        20: iconst_3
+        21: invokestatic  #51                 // Method scala/runtime/BoxesRunTime.boxToInteger:(I)Ljava/lang/Integer;
+        24: getstatic     #16                 // Field scala/collection/immutable/Nil$.MODULE$:Lscala/collection/immutable/Nil$;
+        27: invokespecial #55                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        30: invokespecial #55                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        33: invokespecial #55                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        36: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      37     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 15: 0
+    Signature: #68                          // ()Lscala/collection/immutable/List<Ljava/lang/Object;>;
+
+  public scala.collection.immutable.List<java.lang.Object> x4();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=13, locals=1, args_size=1
+         0: new           #45                 // class scala/collection/immutable/$colon$colon
+         3: dup
+         4: iconst_1
+         5: invokestatic  #51                 // Method scala/runtime/BoxesRunTime.boxToInteger:(I)Ljava/lang/Integer;
+         8: new           #45                 // class scala/collection/immutable/$colon$colon
+        11: dup
+        12: iconst_2
+        13: invokestatic  #51                 // Method scala/runtime/BoxesRunTime.boxToInteger:(I)Ljava/lang/Integer;
+        16: new           #45                 // class scala/collection/immutable/$colon$colon
+        19: dup
+        20: iconst_3
+        21: invokestatic  #51                 // Method scala/runtime/BoxesRunTime.boxToInteger:(I)Ljava/lang/Integer;
+        24: new           #45                 // class scala/collection/immutable/$colon$colon
+        27: dup
+        28: iconst_4
+        29: invokestatic  #51                 // Method scala/runtime/BoxesRunTime.boxToInteger:(I)Ljava/lang/Integer;
+        32: getstatic     #16                 // Field scala/collection/immutable/Nil$.MODULE$:Lscala/collection/immutable/Nil$;
+        35: invokespecial #55                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        38: invokespecial #55                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        41: invokespecial #55                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        44: invokespecial #55                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        47: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      48     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 16: 0
+    Signature: #68                          // ()Lscala/collection/immutable/List<Ljava/lang/Object;>;
+
+  public scala.collection.immutable.List<java.lang.Object> x5();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=16, locals=1, args_size=1
+         0: new           #45                 // class scala/collection/immutable/$colon$colon
+         3: dup
+         4: iconst_1
+         5: invokestatic  #51                 // Method scala/runtime/BoxesRunTime.boxToInteger:(I)Ljava/lang/Integer;
+         8: new           #45                 // class scala/collection/immutable/$colon$colon
+        11: dup
+        12: iconst_2
+        13: invokestatic  #51                 // Method scala/runtime/BoxesRunTime.boxToInteger:(I)Ljava/lang/Integer;
+        16: new           #45                 // class scala/collection/immutable/$colon$colon
+        19: dup
+        20: iconst_3
+        21: invokestatic  #51                 // Method scala/runtime/BoxesRunTime.boxToInteger:(I)Ljava/lang/Integer;
+        24: new           #45                 // class scala/collection/immutable/$colon$colon
+        27: dup
+        28: iconst_4
+        29: invokestatic  #51                 // Method scala/runtime/BoxesRunTime.boxToInteger:(I)Ljava/lang/Integer;
+        32: new           #45                 // class scala/collection/immutable/$colon$colon
+        35: dup
+        36: iconst_5
+        37: invokestatic  #51                 // Method scala/runtime/BoxesRunTime.boxToInteger:(I)Ljava/lang/Integer;
+        40: getstatic     #16                 // Field scala/collection/immutable/Nil$.MODULE$:Lscala/collection/immutable/Nil$;
+        43: invokespecial #55                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        46: invokespecial #55                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        49: invokespecial #55                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        52: invokespecial #55                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        55: invokespecial #55                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        58: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      59     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 17: 0
+    Signature: #68                          // ()Lscala/collection/immutable/List<Ljava/lang/Object;>;
+
+  public t.Bytecode();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #62                 // Method java/lang/Object."<init>":()V
+         4: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 18: 0
+        line 3: 4
+}
+SourceFile: "<pastie>"
+RuntimeVisibleAnnotations:
+  0: #6(#7=s#8)
+Error: unknown attribute
+  ScalaInlineInfo: length = 0x45
+   01 00 00 0D 00 34 00 3C 00 00 09 00 0A 00 00 13
+   00 0A 00 00 26 00 0A 00 00 27 00 0A 00 00 28 00
+   0A 00 00 29 00 0A 00 00 2A 00 0A 00 00 2B 00 0A
+   00 00 38 00 0A 00 00 39 00 0A 00 00 3A 00 0A 00
+   00 3B 00 0A 00
+Error: unknown attribute
+  ScalaSig: length = 0x3
+   05 00 00
+
+scala> :reset
+Resetting interpreter state.
+Forgetting all expression results and named terms: $intp
+
+scala> :paste -raw
+// Entering paste mode (ctrl-D to finish)
+
+package t
+
+class Bytecode {
+  def l0 = List()
+  def l1 = List("1")
+  def l2 = List("1", "2")
+  def l3 = List("1", "2", "3")
+  def l4 = List("1", "2", "3", "4")
+  def l5 = List("1", "2", "3", "4", "5")
+
+  import collectmacros._
+  def x0 = xList()
+  def x1 = xList("1")
+  def x2 = xList("1", "2")
+  def x3 = xList("1", "2", "3")
+  def x4 = xList("1", "2", "3", "4")
+  def x5 = xList("1", "2", "3", "4", "5")
+}
+
+// Exiting paste mode, now interpreting.
+
+
+scala> :javap t.Bytecode
+  Size 2829 bytes
+  MD5 checksum 933b95e8acb630de136c9a56f8d0646f
+  Compiled from "<pastie>"
+public class t.Bytecode
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Utf8               t/Bytecode
+   #2 = Class              #1             // t/Bytecode
+   #3 = Utf8               java/lang/Object
+   #4 = Class              #3             // java/lang/Object
+   #5 = Utf8               <pastie>
+   #6 = Utf8               Lscala/reflect/ScalaSignature;
+   #7 = Utf8               bytes
+   #8 = Utf8               53A!
+                               \tA!);fG>$WMC!8A\n\"a!Q!Cg
+                                                         G.Y!a!8z%4\"B\tqAj]&$F!\t!D\"\ta'F!\r)\"H-)qG\nS6lW^1cYT!!\r|G\3di&|g.-\t!A*[:u!\t9Q$\t9aj;iS:<\"\t\tA72+cA
+                                                                                                                                                                    AA%KK)aeJYtwMC)QM^1\n)*#AB*ue&tw\rC-%me!)aCCAn\ra!\t!IYRBQA\r\n!\t
+                                                         QAAaT#]zDD9{Pu)ByI|w \n%I!AA
+                                                                                     7m[1hK&1}!AQA\r
+                                                                                                    !_2aN $1\"D\tA(CI1)yg!)!\nC!\taQqV
+   #9 = Utf8               l0
+  #10 = Utf8               ()Lscala/collection/immutable/List;
+  #11 = Utf8               scala/collection/immutable/Nil$
+  #12 = Class              #11            // scala/collection/immutable/Nil$
+  #13 = Utf8               MODULE$
+  #14 = Utf8               Lscala/collection/immutable/Nil$;
+  #15 = NameAndType        #13:#14        // MODULE$:Lscala/collection/immutable/Nil$;
+  #16 = Fieldref           #12.#15        // scala/collection/immutable/Nil$.MODULE$:Lscala/collection/immutable/Nil$;
+  #17 = Utf8               this
+  #18 = Utf8               Lt/Bytecode;
+  #19 = Utf8               l1
+  #20 = Utf8               scala/collection/immutable/List$
+  #21 = Class              #20            // scala/collection/immutable/List$
+  #22 = Utf8               Lscala/collection/immutable/List$;
+  #23 = NameAndType        #13:#22        // MODULE$:Lscala/collection/immutable/List$;
+  #24 = Fieldref           #21.#23        // scala/collection/immutable/List$.MODULE$:Lscala/collection/immutable/List$;
+  #25 = Utf8               scala/Predef$
+  #26 = Class              #25            // scala/Predef$
+  #27 = Utf8               Lscala/Predef$;
+  #28 = NameAndType        #13:#27        // MODULE$:Lscala/Predef$;
+  #29 = Fieldref           #26.#28        // scala/Predef$.MODULE$:Lscala/Predef$;
+  #30 = Utf8               java/lang/String
+  #31 = Class              #30            // java/lang/String
+  #32 = Utf8               1
+  #33 = String             #32            // 1
+  #34 = Utf8               [Ljava/lang/Object;
+  #35 = Class              #34            // "[Ljava/lang/Object;"
+  #36 = Utf8               wrapRefArray
+  #37 = Utf8               ([Ljava/lang/Object;)Lscala/collection/mutable/WrappedArray;
+  #38 = NameAndType        #36:#37        // wrapRefArray:([Ljava/lang/Object;)Lscala/collection/mutable/WrappedArray;
+  #39 = Methodref          #26.#38        // scala/Predef$.wrapRefArray:([Ljava/lang/Object;)Lscala/collection/mutable/WrappedArray;
+  #40 = Utf8               apply
+  #41 = Utf8               (Lscala/collection/Seq;)Lscala/collection/immutable/List;
+  #42 = NameAndType        #40:#41        // apply:(Lscala/collection/Seq;)Lscala/collection/immutable/List;
+  #43 = Methodref          #21.#42        // scala/collection/immutable/List$.apply:(Lscala/collection/Seq;)Lscala/collection/immutable/List;
+  #44 = Utf8               l2
+  #45 = Utf8               2
+  #46 = String             #45            // 2
+  #47 = Utf8               l3
+  #48 = Utf8               3
+  #49 = String             #48            // 3
+  #50 = Utf8               l4
+  #51 = Utf8               4
+  #52 = String             #51            // 4
+  #53 = Utf8               l5
+  #54 = Utf8               5
+  #55 = String             #54            // 5
+  #56 = Utf8               x0
+  #57 = Utf8               x1
+  #58 = Utf8               scala/collection/immutable/$colon$colon
+  #59 = Class              #58            // scala/collection/immutable/$colon$colon
+  #60 = Utf8               <init>
+  #61 = Utf8               (Ljava/lang/Object;Lscala/collection/immutable/List;)V
+  #62 = NameAndType        #60:#61        // "<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+  #63 = Methodref          #59.#62        // scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+  #64 = Utf8               x2
+  #65 = Utf8               x3
+  #66 = Utf8               x4
+  #67 = Utf8               x5
+  #68 = Utf8               ()V
+  #69 = NameAndType        #60:#68        // "<init>":()V
+  #70 = Methodref          #4.#69         // java/lang/Object."<init>":()V
+  #71 = Utf8               Code
+  #72 = Utf8               LocalVariableTable
+  #73 = Utf8               LineNumberTable
+  #74 = Utf8               Signature
+  #75 = Utf8               ()Lscala/collection/immutable/List<Lscala/runtime/Nothing$;>;
+  #76 = Utf8               ()Lscala/collection/immutable/List<Ljava/lang/String;>;
+  #77 = Utf8               SourceFile
+  #78 = Utf8               RuntimeVisibleAnnotations
+  #79 = Utf8               ScalaInlineInfo
+  #80 = Utf8               ScalaSig
+{
+  public scala.collection.immutable.List<scala.runtime.Nothing$> l0();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: getstatic     #16                 // Field scala/collection/immutable/Nil$.MODULE$:Lscala/collection/immutable/Nil$;
+         3: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       4     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 4: 0
+    Signature: #75                          // ()Lscala/collection/immutable/List<Lscala/runtime/Nothing$;>;
+
+  public scala.collection.immutable.List<java.lang.String> l1();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=6, locals=1, args_size=1
+         0: getstatic     #24                 // Field scala/collection/immutable/List$.MODULE$:Lscala/collection/immutable/List$;
+         3: getstatic     #29                 // Field scala/Predef$.MODULE$:Lscala/Predef$;
+         6: iconst_1
+         7: anewarray     #31                 // class java/lang/String
+        10: dup
+        11: iconst_0
+        12: ldc           #33                 // String 1
+        14: aastore
+        15: checkcast     #35                 // class "[Ljava/lang/Object;"
+        18: invokevirtual #39                 // Method scala/Predef$.wrapRefArray:([Ljava/lang/Object;)Lscala/collection/mutable/WrappedArray;
+        21: invokevirtual #43                 // Method scala/collection/immutable/List$.apply:(Lscala/collection/Seq;)Lscala/collection/immutable/List;
+        24: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      25     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 5: 0
+    Signature: #76                          // ()Lscala/collection/immutable/List<Ljava/lang/String;>;
+
+  public scala.collection.immutable.List<java.lang.String> l2();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=6, locals=1, args_size=1
+         0: getstatic     #24                 // Field scala/collection/immutable/List$.MODULE$:Lscala/collection/immutable/List$;
+         3: getstatic     #29                 // Field scala/Predef$.MODULE$:Lscala/Predef$;
+         6: iconst_2
+         7: anewarray     #31                 // class java/lang/String
+        10: dup
+        11: iconst_0
+        12: ldc           #33                 // String 1
+        14: aastore
+        15: dup
+        16: iconst_1
+        17: ldc           #46                 // String 2
+        19: aastore
+        20: checkcast     #35                 // class "[Ljava/lang/Object;"
+        23: invokevirtual #39                 // Method scala/Predef$.wrapRefArray:([Ljava/lang/Object;)Lscala/collection/mutable/WrappedArray;
+        26: invokevirtual #43                 // Method scala/collection/immutable/List$.apply:(Lscala/collection/Seq;)Lscala/collection/immutable/List;
+        29: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      30     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 6: 0
+    Signature: #76                          // ()Lscala/collection/immutable/List<Ljava/lang/String;>;
+
+  public scala.collection.immutable.List<java.lang.String> l3();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=6, locals=1, args_size=1
+         0: getstatic     #24                 // Field scala/collection/immutable/List$.MODULE$:Lscala/collection/immutable/List$;
+         3: getstatic     #29                 // Field scala/Predef$.MODULE$:Lscala/Predef$;
+         6: iconst_3
+         7: anewarray     #31                 // class java/lang/String
+        10: dup
+        11: iconst_0
+        12: ldc           #33                 // String 1
+        14: aastore
+        15: dup
+        16: iconst_1
+        17: ldc           #46                 // String 2
+        19: aastore
+        20: dup
+        21: iconst_2
+        22: ldc           #49                 // String 3
+        24: aastore
+        25: checkcast     #35                 // class "[Ljava/lang/Object;"
+        28: invokevirtual #39                 // Method scala/Predef$.wrapRefArray:([Ljava/lang/Object;)Lscala/collection/mutable/WrappedArray;
+        31: invokevirtual #43                 // Method scala/collection/immutable/List$.apply:(Lscala/collection/Seq;)Lscala/collection/immutable/List;
+        34: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      35     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 7: 0
+    Signature: #76                          // ()Lscala/collection/immutable/List<Ljava/lang/String;>;
+
+  public scala.collection.immutable.List<java.lang.String> l4();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=6, locals=1, args_size=1
+         0: getstatic     #24                 // Field scala/collection/immutable/List$.MODULE$:Lscala/collection/immutable/List$;
+         3: getstatic     #29                 // Field scala/Predef$.MODULE$:Lscala/Predef$;
+         6: iconst_4
+         7: anewarray     #31                 // class java/lang/String
+        10: dup
+        11: iconst_0
+        12: ldc           #33                 // String 1
+        14: aastore
+        15: dup
+        16: iconst_1
+        17: ldc           #46                 // String 2
+        19: aastore
+        20: dup
+        21: iconst_2
+        22: ldc           #49                 // String 3
+        24: aastore
+        25: dup
+        26: iconst_3
+        27: ldc           #52                 // String 4
+        29: aastore
+        30: checkcast     #35                 // class "[Ljava/lang/Object;"
+        33: invokevirtual #39                 // Method scala/Predef$.wrapRefArray:([Ljava/lang/Object;)Lscala/collection/mutable/WrappedArray;
+        36: invokevirtual #43                 // Method scala/collection/immutable/List$.apply:(Lscala/collection/Seq;)Lscala/collection/immutable/List;
+        39: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      40     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 8: 0
+    Signature: #76                          // ()Lscala/collection/immutable/List<Ljava/lang/String;>;
+
+  public scala.collection.immutable.List<java.lang.String> l5();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=6, locals=1, args_size=1
+         0: getstatic     #24                 // Field scala/collection/immutable/List$.MODULE$:Lscala/collection/immutable/List$;
+         3: getstatic     #29                 // Field scala/Predef$.MODULE$:Lscala/Predef$;
+         6: iconst_5
+         7: anewarray     #31                 // class java/lang/String
+        10: dup
+        11: iconst_0
+        12: ldc           #33                 // String 1
+        14: aastore
+        15: dup
+        16: iconst_1
+        17: ldc           #46                 // String 2
+        19: aastore
+        20: dup
+        21: iconst_2
+        22: ldc           #49                 // String 3
+        24: aastore
+        25: dup
+        26: iconst_3
+        27: ldc           #52                 // String 4
+        29: aastore
+        30: dup
+        31: iconst_4
+        32: ldc           #55                 // String 5
+        34: aastore
+        35: checkcast     #35                 // class "[Ljava/lang/Object;"
+        38: invokevirtual #39                 // Method scala/Predef$.wrapRefArray:([Ljava/lang/Object;)Lscala/collection/mutable/WrappedArray;
+        41: invokevirtual #43                 // Method scala/collection/immutable/List$.apply:(Lscala/collection/Seq;)Lscala/collection/immutable/List;
+        44: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      45     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 9: 0
+    Signature: #76                          // ()Lscala/collection/immutable/List<Ljava/lang/String;>;
+
+  public scala.collection.immutable.List<scala.runtime.Nothing$> x0();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: getstatic     #16                 // Field scala/collection/immutable/Nil$.MODULE$:Lscala/collection/immutable/Nil$;
+         3: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       4     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 12: 0
+    Signature: #75                          // ()Lscala/collection/immutable/List<Lscala/runtime/Nothing$;>;
+
+  public scala.collection.immutable.List<java.lang.String> x1();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=4, locals=1, args_size=1
+         0: new           #59                 // class scala/collection/immutable/$colon$colon
+         3: dup
+         4: ldc           #33                 // String 1
+         6: getstatic     #16                 // Field scala/collection/immutable/Nil$.MODULE$:Lscala/collection/immutable/Nil$;
+         9: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        12: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      13     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 13: 0
+    Signature: #76                          // ()Lscala/collection/immutable/List<Ljava/lang/String;>;
+
+  public scala.collection.immutable.List<java.lang.String> x2();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=7, locals=1, args_size=1
+         0: new           #59                 // class scala/collection/immutable/$colon$colon
+         3: dup
+         4: ldc           #33                 // String 1
+         6: new           #59                 // class scala/collection/immutable/$colon$colon
+         9: dup
+        10: ldc           #46                 // String 2
+        12: getstatic     #16                 // Field scala/collection/immutable/Nil$.MODULE$:Lscala/collection/immutable/Nil$;
+        15: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        18: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        21: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      22     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 14: 0
+    Signature: #76                          // ()Lscala/collection/immutable/List<Ljava/lang/String;>;
+
+  public scala.collection.immutable.List<java.lang.String> x3();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=10, locals=1, args_size=1
+         0: new           #59                 // class scala/collection/immutable/$colon$colon
+         3: dup
+         4: ldc           #33                 // String 1
+         6: new           #59                 // class scala/collection/immutable/$colon$colon
+         9: dup
+        10: ldc           #46                 // String 2
+        12: new           #59                 // class scala/collection/immutable/$colon$colon
+        15: dup
+        16: ldc           #49                 // String 3
+        18: getstatic     #16                 // Field scala/collection/immutable/Nil$.MODULE$:Lscala/collection/immutable/Nil$;
+        21: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        24: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        27: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        30: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      31     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 15: 0
+    Signature: #76                          // ()Lscala/collection/immutable/List<Ljava/lang/String;>;
+
+  public scala.collection.immutable.List<java.lang.String> x4();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=13, locals=1, args_size=1
+         0: new           #59                 // class scala/collection/immutable/$colon$colon
+         3: dup
+         4: ldc           #33                 // String 1
+         6: new           #59                 // class scala/collection/immutable/$colon$colon
+         9: dup
+        10: ldc           #46                 // String 2
+        12: new           #59                 // class scala/collection/immutable/$colon$colon
+        15: dup
+        16: ldc           #49                 // String 3
+        18: new           #59                 // class scala/collection/immutable/$colon$colon
+        21: dup
+        22: ldc           #52                 // String 4
+        24: getstatic     #16                 // Field scala/collection/immutable/Nil$.MODULE$:Lscala/collection/immutable/Nil$;
+        27: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        30: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        33: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        36: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        39: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      40     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 16: 0
+    Signature: #76                          // ()Lscala/collection/immutable/List<Ljava/lang/String;>;
+
+  public scala.collection.immutable.List<java.lang.String> x5();
+    descriptor: ()Lscala/collection/immutable/List;
+    flags: ACC_PUBLIC
+    Code:
+      stack=16, locals=1, args_size=1
+         0: new           #59                 // class scala/collection/immutable/$colon$colon
+         3: dup
+         4: ldc           #33                 // String 1
+         6: new           #59                 // class scala/collection/immutable/$colon$colon
+         9: dup
+        10: ldc           #46                 // String 2
+        12: new           #59                 // class scala/collection/immutable/$colon$colon
+        15: dup
+        16: ldc           #49                 // String 3
+        18: new           #59                 // class scala/collection/immutable/$colon$colon
+        21: dup
+        22: ldc           #52                 // String 4
+        24: new           #59                 // class scala/collection/immutable/$colon$colon
+        27: dup
+        28: ldc           #55                 // String 5
+        30: getstatic     #16                 // Field scala/collection/immutable/Nil$.MODULE$:Lscala/collection/immutable/Nil$;
+        33: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        36: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        39: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        42: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        45: invokespecial #63                 // Method scala/collection/immutable/$colon$colon."<init>":(Ljava/lang/Object;Lscala/collection/immutable/List;)V
+        48: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      49     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 17: 0
+    Signature: #76                          // ()Lscala/collection/immutable/List<Ljava/lang/String;>;
+
+  public t.Bytecode();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #70                 // Method java/lang/Object."<init>":()V
+         4: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lt/Bytecode;
+      LineNumberTable:
+        line 18: 0
+        line 3: 4
+}
+SourceFile: "<pastie>"
+RuntimeVisibleAnnotations:
+  0: #6(#7=s#8)
+Error: unknown attribute
+  ScalaInlineInfo: length = 0x45
+   01 00 00 0D 00 3C 00 44 00 00 09 00 0A 00 00 13
+   00 0A 00 00 2C 00 0A 00 00 2F 00 0A 00 00 32 00
+   0A 00 00 35 00 0A 00 00 38 00 0A 00 00 39 00 0A
+   00 00 40 00 0A 00 00 41 00 0A 00 00 42 00 0A 00
+   00 43 00 0A 00
+Error: unknown attribute
+  ScalaSig: length = 0x3
+   05 00 00
+
+scala>
